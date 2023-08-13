@@ -3,7 +3,7 @@ import Link from 'next/link'
 export default function SSR({ formattedDate }) {
   return (
     <>
-      <h1>Server-side rendered page</h1>
+      <h1>Server-side rendered page 내용 변경3</h1>
       <p>
         This page is server-side rendered. It was rendered on {formattedDate}.
       </p>
