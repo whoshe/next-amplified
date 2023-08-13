@@ -1,16 +1,27 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
-import { Authenticator } from "@aws-amplify/ui-react";
-import { Amplify } from "aws-amplify";
-import awsExports from "@/aws-exports";
-Amplify.configure({ ...awsExports, ssr: true });
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home() {
+export default function Home({ formattedDate }) {
   return (
-    <main className={`${inter.className}`}>
-      <div>어서오세요.</div>{" "}
-    </main>
+    <>
+      <h1>Static page</h1>
+      <p>This page is static. It was built on {formattedDate}.</p>
+      <p>
+        <Link href="/ssr">View a server-side rendered page.</Link>
+      </p>
+    </>
   );
+}
+
+export async function getStaticProps() {
+  const buildDate = Date.now();
+  const formattedDate = new Intl.DateTimeFormat("en-US", {
+    dateStyle: "long",
+    timeStyle: "long",
+  }).format(buildDate);
+
+  return { props: { formattedDate } };
 }
