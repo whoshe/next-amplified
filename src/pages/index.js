@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home({ formattedDate }) {
   return (
     <>
-      <h1>Static page 내용 변경3</h1>
+      <h1>Static page 내용 변경4</h1>
       <p>This page is static. It was built on {formattedDate}.</p>
       <p>
         <Link href="/ssr">View a server-side rendered page.</Link>
