@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Products({ productList }) {
   return (
     <>
@@ -10,7 +12,7 @@ export default function Products({ productList }) {
         ))}
       </ul>
       <p>
-        <a href="/">홈페이지로 가기</a>
+        <Link href="/">홈페이지로 가기</Link>
       </p>
     </>
   );
