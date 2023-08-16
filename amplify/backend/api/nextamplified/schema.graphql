@@ -1,7 +1,5 @@
-type Post
-  @model
-  @auth(rules: [{ allow: owner }, { allow: public, operations: [read] }]) {
+type Todo @model {
   id: ID!
   title: String!
-  content: String!
+  completed: Boolean!
 }

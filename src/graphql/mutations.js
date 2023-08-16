@@ -1,51 +1,45 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const createPost = /* GraphQL */ `
-  mutation CreatePost(
-    $input: CreatePostInput!
-    $condition: ModelPostConditionInput
+export const createTodo = /* GraphQL */ `
+  mutation CreateTodo(
+    $input: CreateTodoInput!
+    $condition: ModelTodoConditionInput
   ) {
-    createPost(input: $input, condition: $condition) {
+    createTodo(input: $input, condition: $condition) {
       id
       title
-      content
+      completed
       createdAt
       updatedAt
-      owner
-      __typename
     }
   }
 `;
-export const updatePost = /* GraphQL */ `
-  mutation UpdatePost(
-    $input: UpdatePostInput!
-    $condition: ModelPostConditionInput
+export const updateTodo = /* GraphQL */ `
+  mutation UpdateTodo(
+    $input: UpdateTodoInput!
+    $condition: ModelTodoConditionInput
   ) {
-    updatePost(input: $input, condition: $condition) {
+    updateTodo(input: $input, condition: $condition) {
       id
       title
-      content
+      completed
       createdAt
       updatedAt
-      owner
-      __typename
     }
   }
 `;
-export const deletePost = /* GraphQL */ `
-  mutation DeletePost(
-    $input: DeletePostInput!
-    $condition: ModelPostConditionInput
+export const deleteTodo = /* GraphQL */ `
+  mutation DeleteTodo(
+    $input: DeleteTodoInput!
+    $condition: ModelTodoConditionInput
   ) {
-    deletePost(input: $input, condition: $condition) {
+    deleteTodo(input: $input, condition: $condition) {
       id
       title
-      content
+      completed
       createdAt
       updatedAt
-      owner
-      __typename
     }
   }
 `;
